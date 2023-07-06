@@ -13,6 +13,8 @@ gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
 gem "redis", "~> 4.0"
+gem 'devise', '~> 4.9', '>= 4.9.2'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -33,6 +35,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   gem 'rspec-rails', '~> 6.0', '>= 6.0.3'
+  gem 'factory_bot_rails', '~> 6.2'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end

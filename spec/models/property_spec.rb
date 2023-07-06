@@ -3,9 +3,11 @@ require 'rails_helper'
 RSpec.describe Property, type: :model do
   describe 'validations' do
     it 'is valid with valid attributes' do
-      property = Property.new(title:'Spacious Apartment', description:'App', address:'Poland, Czestochowa', price: 250000, number_of_bedrooms: 4 )
+      user = User.create(email: 'user@example.com', password: 'password')
+      property = Property.new(title:'Spacious Apartment', description:'App', address:'Poland, Czestochowa', price: 250000, number_of_bedrooms: 4, user: user)
       expect(property).to be_valid
     end
+
 
     it 'is not valid without title' do
       property = Property.new(title: nil, description: 'App', address:'Poland, Czestochowa', price: 250000, number_of_bedrooms: 4 )

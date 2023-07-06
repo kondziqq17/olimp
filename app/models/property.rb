@@ -4,4 +4,6 @@ class Property < ApplicationRecord
   validates :address, presence: true
   validates :price, presence: true
   validates :number_of_bedrooms, presence: true
+
+  belongs_to :user
 end
